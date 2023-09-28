@@ -25,7 +25,7 @@ jobs:
           artifactsPath: ${{ matrix.testMode }}-artifacts
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           checkName: ${{ matrix.testMode }} Test Results
-          customParameters: -testFilter "^Nostraverse\."
+          # customParameters: -testFilter "^Nostraverse\."
 
       - name: Upload test results
         uses: actions/upload-artifact@v2
