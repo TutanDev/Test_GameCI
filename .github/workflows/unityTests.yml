@@ -20,12 +20,12 @@ jobs:
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_PERSONAL_LICENSE }}
         with:
-          customImage: 'unityci/editor:ubuntu-2021.3.18f1-android-1.0'
+          # customImage: 'unityci/editor:ubuntu-2021.3.18f1-android-1.0'
           testMode: ${{ matrix.testMode }}
           artifactsPath: ${{ matrix.testMode }}-artifacts
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           checkName: ${{ matrix.testMode }} Test Results
-          # customParameters: -testFilter "^Nostraverse\."
+          customParameters: -testFilter "^Nostraverse\."
 
       - name: Upload test results
         uses: actions/upload-artifact@v2
