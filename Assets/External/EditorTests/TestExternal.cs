@@ -1,11 +1,11 @@
 using NUnit.Framework;
 
-namespace Nostraverse.PlayModeTests
+namespace External.PlayModeTests
 {
 	public class TestExternal
 	{
 		[Test]
-		public void TestNostraverseSimplePasses()
+		public void TestExternalSimplePasses()
 		{
 			Assert.IsTrue(false);
 		}
